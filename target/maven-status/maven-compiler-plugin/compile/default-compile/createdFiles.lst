@@ -1,0 +1,4 @@
+com\spring\SpringRESTful\Configuration\WebConfig.class
+com\spring\SpringRESTful\Controller\MainController.class
+com\spring\SpringRESTful\Configuration\Container.class
+com\spring\SpringRESTful\Model\Student.class
