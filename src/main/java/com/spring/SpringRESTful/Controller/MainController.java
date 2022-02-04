@@ -66,23 +66,6 @@ public class MainController {
 		return students.get(id - 1);
 	}
 
-	@ExceptionHandler
-	public ResponseEntity<StudentExceptionHandler> studentException(StudentException e)
-	{
-		StudentExceptionHandler studentExceptionHandler = new StudentExceptionHandler();
-		studentExceptionHandler.setStatusCode(HttpStatus.NOT_FOUND.value());
-		studentExceptionHandler.setTime(System.currentTimeMillis());
-		studentExceptionHandler.setMessage(e.getMessage());
-		return new ResponseEntity<StudentExceptionHandler>(studentExceptionHandler, HttpStatus.NOT_FOUND);
-	}
-	@ExceptionHandler
-	public ResponseEntity<StudentExceptionHandler> studentException(Exception e)
-	{
-		StudentExceptionHandler studentExceptionHandler = new StudentExceptionHandler();
-		studentExceptionHandler.setStatusCode(HttpStatus.BAD_REQUEST.value());
-		studentExceptionHandler.setTime(System.currentTimeMillis());
-		studentExceptionHandler.setMessage(e.getMessage());
-		return new ResponseEntity<StudentExceptionHandler>(studentExceptionHandler, HttpStatus.BAD_REQUEST);
-	}
+
 
 }
